@@ -1,6 +1,6 @@
 # Unity で使える Scroll View
 ## 概要
-<動画>
+![sample movie](https://user-images.githubusercontent.com/62986321/143851080-ceb44ae5-4ada-44c7-a08a-30bf7307e8c9.gif)
 
 添付動画の様なスクロールビューを構築するためのプレハブ等を提供．  
 数個のGameObjectを使いまわして膨大な量のコンテンツをリストで表示できるアルゴリズムを活用し，メモリの圧迫を抑える実装をしている．
@@ -20,7 +20,7 @@
 ## スクリプトの説明
 
 ### ざっくりクラス図
-![Class diagram](.\Reference\class_diagram.png)
+![Class diagram](https://github.com/sdtech-kozakiyuta/Unity_UI_ScrollView/blob/main/Reference/class_diagram.png)
 
 本スクリプトはMVCモデルを意識して実装している．"ViewController"がMVCにおける"Controller"の役割をになっており，外部のデータベースから表示させたいコンテンツデータをとってきて，MVCの"View"に該当する"InfiniteScroll", "LimitedScrollController", "ScrollViewItem"を介して表示を切り替える．
 
@@ -35,35 +35,7 @@
 
 ### ざっくりシーケンス図
 #### 起動時
-![Sequence diagram](./Reference/sequence_diagram.png)
-
-- 
+![Sequence diagram](https://github.com/sdtech-kozakiyuta/Unity_UI_ScrollView/blob/main/Reference/class_diagram.png)
 
 #### フィルタでリストのコンテンツを操作した時
-![Sequence diagram](./Reference/sequence_diagram_OnFilter.png)
-
-
-## 概要
-- スクロールビュー
-    - 一定のゲームオブジェクトをインスタンス化して，そのコンテンツを使いまわすようなアルゴリズム．メモリを圧迫せず，大量のコンテンツを表示可能．
-    - ネットに上がっているスクリプトを参照して実装している．
-    - 今回の場合は，コンテンツ内容が動的に変わる場合に動的に対応できるように応用を聞かせたパターン．
-    - 有限と無限のスクロールビューを生成できる．（有限の場合はコンテンツ一覧．無限の場合はカレンダーなど）
-
-入ってる物の説明
-- 有限スクロールのサンプルシーン
-    - 0-30のコンテンツをループの要領で表示させている
-- 無限スクロールのサンプルシーン
-
-
-使いどころ
-- コンテンツの一覧表示
-- カレンダーなど
-
-スクリプトの説明
-- ベースの考え方．（MVC）
-- クラス図
-- 起動時のシーケンス
-
-使い方
-- 
+![Sequence diagram](https://github.com/sdtech-kozakiyuta/Unity_UI_ScrollView/blob/main/Reference/Sequence_diagram_OnFilter.png)
