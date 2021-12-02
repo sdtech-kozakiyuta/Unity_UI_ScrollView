@@ -8,6 +8,7 @@ public class InfiniteScrollController : UIBehaviour, IInfiniteScrollSetup
 	public void OnPostSetupItems()
 	{
 		GetComponent<InfiniteScroll>().onUpdateItem.AddListener(OnUpdateItem);
+		GetComponent<InfiniteScroll>().RefreshView();
 		GetComponentInParent<ScrollRect>().movementType = ScrollRect.MovementType.Unrestricted;
 	}
 
